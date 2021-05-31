@@ -1,9 +1,13 @@
-<div class="d-sm-inline-block">
-  <div class="card" style="width: 18rem;">
-  <img src="<%= product.image %>" class="card-img-top" alt="...">
+<div class="d-sm-inline-block item mb-2">
+  <div class="card product-item" >
+  <div class="img">
+    <img src="<%= product.image %>" class="card-img-top" alt="...">
+  </div>
   <div class="card-body">
-    <h5 class="card-title"><%= product.title %></h5>
-    <p class="card-text"><%= product.description %></p>
+    <h5 class="card-title enable-show-more"><%= product.title %></h5>
+    <p class="card-text enable-show-more more-line m96"><%= product.description %></p>
+    <p class="card-text"><%= product.price %></p>
+    <p class="card-text"><%= product.category %></p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>

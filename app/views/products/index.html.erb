@@ -1,5 +1,5 @@
 <section>
-  <div>
+  <div class="product">
     <% @products.each do |product| %>
       <%= render partial: 'products/partials/item', locals: {product: product} %>
     <% end %>
