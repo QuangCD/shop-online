@@ -19,6 +19,22 @@
     .product-item {
         width: 23.5rem;
     }
+    .price {
+        font-size: 20px;
+        font-weight: bold;
+        position: relative;
+        &:after {
+            content: "đ";
+            position: absolute;
+            top: -8px;
+        }
+        &.sale {
+            text-align: right;
+            font-size: 15px;
+            font-weight: normal;
+            text-decoration: line-through;
+        }
+    }
 }
 
 .product {
