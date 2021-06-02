@@ -1,4 +1,5 @@
 <div class="d-sm-inline-block item mb-2">
+<a href=<%= product_path(product.id)%>>
   <div class="card product-item" >
   <div class="img">
     <img src="<%= product.image %>" class="card-img-top" alt="...">
@@ -7,15 +8,23 @@
     <h5 class="card-title enable-show-more"><%= product.title %></h5>
     <p class="card-text enable-show-more more-line m96"><%= product.description %></p>
     <div class="row">
+
+    <% if product.sale? %>
       <div class="col-6">
         <p class="card-text price sale float-right"><%= product.price %></p>
       </div>
       <div class="col-6">
         <p class="card-text price "><%= product.price %></p>
       </div>
+      <% else %>
+      <% end %>
+
+      
+      
     </div>
     <p class="card-text"><%= product.category %></p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
+</a>
 </div>
